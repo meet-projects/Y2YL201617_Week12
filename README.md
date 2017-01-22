@@ -14,7 +14,7 @@ Go ahead and run the ```populateDB.py``` script in your repository to populate y
 The Heroku cloud application looks for a file called ```Procfile``` (there no extention on this file so do not add anything like .txt or .html to the end of it) In Sublime create a file called ```Procfile``` that contains the following configuration information:
 
 ```
-web: gunicorn -w 4 -b 0.0.0.0:$PORT -k gevent project:app
+web: gunicorn -w 4 -b 0.0.0.0:$PORT -k gevent webapp:app
 
 ```
 
@@ -24,8 +24,14 @@ Save and close this file
 Heroku will create a python environment that matches the one on your development machine.  In order to know all of the necessary libraries to install, you will need to export a list of all of the software needed for deployment. Create a file called ```requirements.txt``` and paste in the following information:
 
 ```
-DO A SUCCESSFUL FREEZE AND ADD THIS INFORMATION
-
+Flask==0.10.1
+itsdangerous==0.24
+Jinja2==2.8
+MarkupSafe==0.23
+mercurial==3.7.3
+mysqlclient==1.3.7
+SQLAlchemy==1.0.13
+Werkzeug==0.11.9
 ```
 
 ## Step 5:  Push your code back to your GitHub account
