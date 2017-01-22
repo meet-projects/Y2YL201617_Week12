@@ -79,7 +79,7 @@ Once you have a mobile phone design, create a design for tablet and desktop. Tes
 Select a color scheme and font family for your website. Use the W3Schools tutorials as your guiding light. 
 
 ## Styling
-Style your flash alerts, forms, favicons, and other small details of your webapp to give it a more profession look and feel.  
+Style your flash alerts, forms, buttons, favicons, and other small details of your webapp to give it a more profession look and feel.  
 
 ## Extra Features
 Explore some of the other How-To's and tutorials on the W3Schools website and see if you can implement them in your own web application.  
