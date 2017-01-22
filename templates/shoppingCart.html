@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}Shopping Cart for {{shoppingCart.customer.name}}{% endblock %}
+{% block body %}
+
+{%if shoppingCart.products == []%}
+<p> There are no items in your shopping cart.</p>
+{% else %}
+<table>
+  <tr><th> Name</th><th>Price</th><th>Quantity</th></tr>
+{% for item in shoppingCart.products %}
+  <tr>
+    <td>{{item.product.name}}</td>
+    <td>{{item.product.price}}</td>
+
+    <td><form action={{ url_for('updateQuantity',product_id = item.product.id)}} method='post'><input type="number" name="quantity"
+     min="0" max="100" step="5" value={{item.quantity}}></td>
+    <td><input type="submit" value = "Update Quantity"></form></td>
+    <td><form action={{url_for('removeFromCart', product_id = item.product.id)}} method='post'> <input type='submit' value="Remove Item"> </form></td>
+</tr>
+    {% endfor %}
+
+  </table>
+
+
+  <a href={{url_for('checkout')}}>Check out</a>
+
+
+{% endif %}
+
+<a href={{ url_for('inventory')}}>Home</a>
+{% endblock %}

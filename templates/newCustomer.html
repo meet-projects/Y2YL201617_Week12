@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}New Customer{% endblock %}
+
+{% block body %}
+<form action="{{ url_for('newCustomer') }}" method = 'post' enctype=multipart/form-data>
+  Name:<br>
+  <input type="text" name="name"><br>
+  Email Address:<br>
+  <input type="text" name="email"><br>
+  Mailing Address:<br>
+  <input type="text" name="address"><br>
+  Password:<br>
+  <input type="password" name="password"><br>
+	<input type=file name=file><br>
+  <input type="submit" value="Create Account">
+</form>
+{% endblock %}

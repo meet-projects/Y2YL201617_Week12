@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}Checkout{% endblock %}
+{% block body %}
+<h1> Are you ready to check out, {{shoppingCart.customer.name}}? </h1>
+
+{%if shoppingCart.products == []%}
+<p> There are no items in your shopping cart.</p>
+{% else %}
+<table>
+  <tr><th> Name</th><th>Price</th><th>Quantity</th><th>total</th></tr>
+  {% for item in shoppingCart.products %}
+  <tr>
+    <td>{{item.product.name}}</td>
+    <td>{{item.product.price}}</td>
+    <td>{{item.quantity}}</td>
+    <td>{{ (item.product.price|float * item.quantity|int) }}</td>
+  </tr>
+  {% endfor %}
+  <th></th><th>Total</th><th>{{total}}</th>
+</table>
+
+<form action="{{ url_for('checkout') }}" method = 'post'>
+  <input type='hidden' name='total' value={{total}}>
+  <input type="submit" value="Checkout">
+</form>
+
+{% endif %}
+{% endblock %}

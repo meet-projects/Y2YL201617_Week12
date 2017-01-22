@@ -1,0 +1,16 @@
+<!doctype html>
+<title>FizzBuzz Cola</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+	<h1>FizzBuzz Cola</h1>
+	<h2>{% block title %}{% endblock %}</h2>
+  	<div class=metanav>
+		<div class="g-signin2" data-onsuccess="onSignIn"></div>
+		<a href="{{ url_for('inventory') }}">inventory</a> || <a href="{{ url_for('login') }}">log in</a> || <a href="{{ url_for('logout') }}">log out</a>
+  	</div>
+	{% for message in get_flashed_messages() %}
+	<div class=flash>{{ message }}</div>
+	{% endfor %}
+
+	{% block body %}{% endblock %}
+</div>
