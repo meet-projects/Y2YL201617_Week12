@@ -24,14 +24,12 @@ Save and close this file
 Heroku will create a python environment that matches the one on your development machine.  In order to know all of the necessary libraries to install, you will need to export a list of all of the software needed for deployment. Create a file called ```requirements.txt``` and paste in the following information:
 
 ```
-Flask==0.10.1
-itsdangerous==0.24
-Jinja2==2.8
-MarkupSafe==0.23
-mercurial==3.7.3
-mysqlclient==1.3.7
-SQLAlchemy==1.0.13
-Werkzeug==0.11.9
+Flask==0.11.1
+passlib==1.7.0
+SQLAlchemy==1.1.5
+Werkzeug==0.11.15
+gunicorn==19.0.0
+gevent==1.2.1
 ```
 
 ## Step 5:  Push your code back to your GitHub account
