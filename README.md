@@ -69,9 +69,14 @@ Now that you have a web app up and running, let's try and make it a little more 
 [W3Schools.com](http://www.w3schools.com) has one of thethe biggest and most extensive set of web design tutorials on the web. Refer to it for any additions you want to add to your site.
 
 ## Responsive Layout
-Starting with the smallest screen, design a layout for the webapp for phones.  Use either a bootstrap, W3.CSS, or your own breakpoints to design for the smallest screens.
+Starting with the smallest screen, design a layout for the webapp for phones.  Make sure the font size looks good on your mobile device and the buttons can be used without having to pinch and zoom. 
+
+Use either a bootstrap, W3.CSS, or your own breakpoints to design for the smallest screens.
+
+I like [this tutorial](https://responsivedesign.is/strategy/page-layout/defining-breakpoints) on setting breakpoints in your CSS code.
 
 Once you have a mobile phone design, create a design for tablet and desktop. Test all of these designs on your phone, tablets, and desktops.  
+
 
 ## Color and Typography
 Select a color scheme and font family for your website. Use the W3Schools tutorials as your guiding light. 
